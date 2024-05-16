@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+
+  </PropertyGroup>
+	
+  <ItemGroup>
+    <PackageReference Include="Handlebars.Net" Version="2.1.6" />
+	  <PackageReference Include="Hl7.Fhir.R4" Version="5.5.1" />
+	<PackageReference Include="Hl7.FhirPath" Version="4.3.0" />
+  </ItemGroup>
+	
+  <ItemGroup>
+    <None Update="Textfiles\Composition-template.hbs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+	  
+  </ItemGroup>
+	<ItemGroup>
+		<None Update="Textfiles\**">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+</Project>
